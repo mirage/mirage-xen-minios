@@ -1,6 +1,12 @@
 #!/bin/sh -ex
 
-PREFIX=`opam config var root`
+if [ "${PREFIX}" = "" ]; then
+  if command -v opam >/dev/null 2>&1; then
+    PREFIX=`opam config var prefix`
+  else
+    PREFIX="/usr/local"
+fi
+
 MINIOS=xen-minios-v0.1
 MINIOS_ARCHIVE=minios-v0.1.tar.gz
 MINIOS_URL=https://github.com/talex5/xen/archive/${MINIOS_ARCHIVE}
@@ -9,7 +15,7 @@ rm -rf ${MINIOS}
 tar -zxf ${MINIOS_ARCHIVE}
 cd ${MINIOS}/extras/mini-os
 make
-make install LIBDIR=${PREFIX}/lib INCLUDEDIR=${PREFIX}/include
+${SUDO} make install LIBDIR=${PREFIX}/lib INCLUDEDIR=${PREFIX}/include
 cd ../../..
 
 LIBM=openlibm-0.3.1-tal1
@@ -20,4 +26,4 @@ rm -rf ${LIBM}
 tar -zxf ${LIBM_ARCHIVE}
 cd ${LIBM}
 make
-make install prefix=${PREFIX}
+${SUDO} make install prefix=${PREFIX}
