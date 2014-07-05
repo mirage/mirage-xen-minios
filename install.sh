@@ -5,6 +5,7 @@ if [ "${PREFIX}" = "" ]; then
     PREFIX=`opam config var prefix`
   else
     PREFIX="/usr/local"
+  fi
 fi
 
 MINIOS=xen-minios-v0.1
