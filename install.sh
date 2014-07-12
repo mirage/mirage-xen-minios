@@ -8,13 +8,13 @@ if [ "${PREFIX}" = "" ]; then
   fi
 fi
 
-MINIOS=xen-minios-v0.1
-MINIOS_ARCHIVE=minios-v0.1.tar.gz
+MINIOS=adbde4a6876232089e091ac883c268a821f820f0
+MINIOS_ARCHIVE=${MINIOS}.tar.gz
 MINIOS_URL=https://github.com/talex5/xen/archive/${MINIOS_ARCHIVE}
 if [ ! -e ${MINIOS_ARCHIVE} ]; then curl -OL ${MINIOS_URL}; fi
 rm -rf ${MINIOS}
 tar -zxf ${MINIOS_ARCHIVE}
-cd ${MINIOS}/extras/mini-os
+cd xen-${MINIOS}/extras/mini-os
 make
 ${SUDO} make install LIBDIR=${PREFIX}/lib INCLUDEDIR=${PREFIX}/include
 cd ../../..
