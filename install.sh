@@ -8,11 +8,11 @@ if [ "${PREFIX}" = "" ]; then
   fi
 fi
 
-MINIOS=adbde4a6876232089e091ac883c268a821f820f0
+MINIOS=minios-v0.2
 MINIOS_ARCHIVE=${MINIOS}.tar.gz
 MINIOS_URL=https://github.com/talex5/xen/archive/${MINIOS_ARCHIVE}
 if [ ! -e ${MINIOS_ARCHIVE} ]; then curl -OL ${MINIOS_URL}; fi
-rm -rf ${MINIOS}
+rm -rf xen-${MINIOS}
 tar -zxf ${MINIOS_ARCHIVE}
 cd xen-${MINIOS}/extras/mini-os
 make
