@@ -17,4 +17,4 @@ sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam
 export OPAMYES=1
 export OPAMVERBOSE=1
 opam init
-./install.sh
+make all
