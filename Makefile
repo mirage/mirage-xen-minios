@@ -1,4 +1,4 @@
-.PHONY: all depend build
+.PHONY: all depend build release
 
 all:
 	$(MAKE) depend
@@ -9,3 +9,7 @@ depend:
 
 build:
 	./install.sh
+
+# make release VERSION=v0.2
+release:
+	cd .. && tar -jcvf mirage-xen-minios-$(VERSION).tar.bz2 mirage-xen-minios --exclude .git
