@@ -5,7 +5,7 @@
 rm -rf xen-${MINIOS}
 tar -zxf ${MINIOS_ARCHIVE}
 cd xen-${MINIOS}/extras/mini-os
-make
+make debug=n
 ${SUDO} make install LIBDIR=${PREFIX}/lib INCLUDEDIR=${PREFIX}/include
 cd ../../..
 
