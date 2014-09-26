@@ -6,7 +6,7 @@ if [ "${PREFIX}" = "" ]; then
   fi
 fi
 
-MINIOS=minios-v0.3
+MINIOS=minios-v0.4
 MINIOS_ARCHIVE=${MINIOS}.tar.gz
 MINIOS_URL=https://github.com/talex5/xen/archive/${MINIOS_ARCHIVE}
 
