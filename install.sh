@@ -12,5 +12,5 @@ cd ../../..
 rm -rf ${LIBM}
 tar -zxf ${LIBM_ARCHIVE}
 cd ${LIBM}
-make
+make CFLAGS="$CFLAGS $(PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig pkg-config libminios-xen --cflags)"
 ${SUDO} make install prefix=${PREFIX}
