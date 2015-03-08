@@ -18,6 +18,7 @@ opam init
 
 opam install depext
 eval `opam config env`
+opam depext xenctrl
 
 opam install mirage-xen-minios
 opam remove mirage-xen-minios
