@@ -19,6 +19,9 @@ opam init
 opam install depext
 eval `opam config env`
 
+opam install mirage-xen-minios
+opam remove mirage-xen-minios
+
 opam pin -k git add mirage-xen-minios .
 opam install mirage-xen-minios
 opam install mirage-xen
