@@ -9,3 +9,4 @@ build: [
 ]
 remove: []
 os: ["linux"]
+depends: ["minios-xen"]
