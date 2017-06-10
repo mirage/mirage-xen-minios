@@ -6,6 +6,6 @@ if [ "${PREFIX}" = "" ]; then
   fi
 fi
 
-LIBM=openlibm-0.4.1-tal1
-LIBM_ARCHIVE=v0.4.1-tal1.tar.gz
-LIBM_URL=https://github.com/talex5/openlibm/archive/${LIBM_ARCHIVE}
+LIBM=openlibm-0.5.4
+LIBM_ARCHIVE=v0.5.4.tar.gz
+LIBM_URL=https://github.com/JuliaLang/openlibm/archive/${LIBM_ARCHIVE}
