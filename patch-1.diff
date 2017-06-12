@@ -1,0 +1,9 @@
+--- openlibm-0.5.4.orig/openlibm.pc.in	2017-06-12 10:51:49.000000000 +0100
++++ openlibm-0.5.4/openlibm.pc.in	2017-06-12 10:51:55.000000000 +0100
+@@ -1,5 +1,5 @@
+ exec_prefix=${prefix}
+-includedir=${prefix}/include
++includedir=${prefix}/include/openlibm
+ libdir=${exec_prefix}/lib
+ 
+ Name: openlibm
