@@ -1,9 +1,15 @@
---- openlibm-0.5.4.orig/openlibm.pc.in	2017-06-12 10:51:49.000000000 +0100
-+++ openlibm-0.5.4/openlibm.pc.in	2017-06-12 10:51:55.000000000 +0100
-@@ -1,5 +1,5 @@
+--- openlibm-0.5.4/openlibm.pc.in	2016-08-28 17:17:43.000000000 +0100
++++ openlibm-0.5.4.2/openlibm.pc.in	2017-06-15 13:33:11.000000000 +0100
+@@ -1,10 +1,11 @@
  exec_prefix=${prefix}
--includedir=${prefix}/include
-+includedir=${prefix}/include/openlibm
+ includedir=${prefix}/include
++includeopenlibmdir=${includedir}/openlibm
  libdir=${exec_prefix}/lib
  
  Name: openlibm
+ Version: ${version}
+ URL: https://github.com/JuliaLang/openlibm
+ Description: High quality system independent, open source libm.
+-Cflags: -I${includedir}
++Cflags: -I${includedir} -I${includeopenlibmdir}
+ Libs: -L${libdir} -lopenlibm
